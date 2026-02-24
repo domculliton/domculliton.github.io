@@ -783,6 +783,102 @@ img { display: block; max-width: 100%; height: auto; }
 }
 
 /* ============================================================
+   STORY STRIP (Home page)
+   ============================================================ */
+.story-strip {
+  background: var(--white);
+  padding: 3.5rem 1.5rem;
+}
+
+.story-wrap {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.story-body {
+  color: var(--text-mid);
+  font-size: 1.03rem;
+  line-height: 1.8;
+}
+
+.story-body p { margin-bottom: 1rem; }
+.story-body p:last-child { margin-bottom: 0; }
+
+.story-body blockquote {
+  border-left: 3px solid var(--green-btn);
+  padding-left: 1rem;
+  margin: 1.25rem 0;
+  font-style: italic;
+  color: var(--text-dark);
+}
+
+/* ============================================================
+   PROMISE STRIP (Home page)
+   ============================================================ */
+.promise-strip {
+  background: var(--green-dark);
+  color: var(--white);
+  padding: 2.75rem 1.5rem;
+  text-align: center;
+}
+
+.promise-strip h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.promise-strip p {
+  max-width: 600px;
+  margin: 0 auto 0.4rem;
+  font-size: 1.03rem;
+  opacity: 0.9;
+  line-height: 1.7;
+}
+
+/* ============================================================
+   BUY — WHY BUY WITH ME (personal two-col layout)
+   ============================================================ */
+.why-buy-section {
+  background: var(--green-light);
+  padding: 3.5rem 1.5rem;
+}
+
+.why-buy-wrap {
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.why-buy-col { flex: 1 1 280px; }
+
+.why-buy-col h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--green-dark);
+  margin-bottom: 0.75rem;
+}
+
+.why-buy-col p {
+  color: var(--text-mid);
+  font-size: 0.97rem;
+  line-height: 1.7;
+  margin-bottom: 0.75rem;
+}
+
+.why-buy-col ul {
+  padding-left: 1.25rem;
+  color: var(--text-mid);
+  font-size: 0.97rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+/* ============================================================
    UTILITY
    ============================================================ */
 .text-center { text-align: center; }
