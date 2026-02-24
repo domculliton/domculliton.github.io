@@ -879,6 +879,109 @@ img { display: block; max-width: 100%; height: auto; }
 }
 
 /* ============================================================
+   VIDEO SECTION
+   ============================================================ */
+.video-strip {
+  background: var(--white);
+  padding: 3.5rem 1.5rem;
+  text-align: center;
+}
+
+.video-wrap {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.video-player {
+  width: 100%;
+  border-radius: var(--radius);
+  box-shadow: 0 8px 40px rgba(41, 84, 62, 0.18);
+  display: block;
+  background: #000;
+}
+
+/* ============================================================
+   TM7 PRODUCT SECTION
+   ============================================================ */
+.tm7-section {
+  background: #0d1a13;
+  padding: 4rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tm7-image {
+  flex: 1 1 300px;
+  max-width: 480px;
+}
+
+.tm7-image img {
+  width: 100%;
+  border-radius: var(--radius);
+}
+
+.tm7-text {
+  flex: 1 1 280px;
+  max-width: 420px;
+  color: var(--white);
+}
+
+.tm7-text h2 {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.tm7-text h2 span {
+  color: #2ecc71;
+}
+
+.tm7-text p {
+  color: rgba(255,255,255,0.75);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+}
+
+.tm7-text ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.tm7-text ul li {
+  color: rgba(255,255,255,0.85);
+  font-size: 0.97rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tm7-text ul li::before {
+  content: '✓';
+  color: #2ecc71;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* ============================================================
+   HERO — small refinements
+   ============================================================ */
+@media (min-width: 769px) {
+  .hero-img-round {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+/* ============================================================
    UTILITY
    ============================================================ */
 .text-center { text-align: center; }
