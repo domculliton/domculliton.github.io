@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://domculliton.github.io/sitemap.xml
