@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book a Free Demo — Dominika's Kitchen</title>
+  <meta name="description" content="Book a free Thermomix cooking demo with Dominika — Zoom or in-person in the DFW area. No obligation, just great food!">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===== STICKY NAV ===== -->
+  <nav class="site-nav">
+    <a class="nav-logo" href="index.html">Dominika's Kitchen</a>
+
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-hamburger" aria-label="Toggle menu">&#9776;</label>
+
+    <div class="nav-menu">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="book-demo.html" class="active">Book a Demo</a></li>
+        <li><a href="buy.html">Buy Thermomix</a></li>
+        <li><a href="join-team.html">Join My Team</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="book-demo.html" class="btn-primary">Book a Demo</a>
+        <a href="buy.html" class="btn-outline">Buy</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== PAGE HERO ===== -->
+  <div class="page-hero">
+    <h1>Book Your Free Demo</h1>
+    <p>Experience Thermomix live — Zoom or in-person in the DFW area. I'll cook, you'll taste, and every question is welcome. Zero pressure, zero obligation.</p>
+  </div>
+
+  <!-- ===== BOOKING FORM ===== -->
+  <section class="form-section">
+    <div class="form-wrap">
+
+      <!-- Thank-you state (hidden until submit) -->
+      <div class="thank-you" id="thank-you">
+        <div style="font-size:3rem;margin-bottom:0.5rem;">&#127859;</div>
+        <h3>You're booked in!</h3>
+        <p>Thanks for reaching out! I'll be in touch within 24 hours to confirm your demo details.</p>
+        <p><strong>What to expect next:</strong> Check your inbox for a confirmation email. We'll nail down the exact time and, if it's in-person, the location.</p>
+        <p style="margin-top:1.25rem;">In the meantime, follow along for recipes and tips:</p>
+        <div style="display:flex;gap:1rem;justify-content:center;margin-top:0.75rem;flex-wrap:wrap;">
+          <a href="#" class="btn btn-green" target="_blank" rel="noopener">Instagram</a>
+          <a href="#" class="btn btn-green-outline" target="_blank" rel="noopener">Facebook</a>
+        </div>
+      </div>
+
+      <!-- Booking Form -->
+      <form id="book-form"
+            action="https://formspree.io/f/REPLACE_WITH_YOUR_ID"
+            method="POST">
+
+        <div class="form-group">
+          <div class="form-row">
+            <div class="form-field">
+              <label for="name">Full Name *</label>
+              <input type="text" id="name" name="name" placeholder="Jane Smith" required>
+            </div>
+            <div class="form-field">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000">
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" placeholder="jane@example.com" required>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="demo-type">Demo Type *</label>
+              <select id="demo-type" name="demo_type" required>
+                <option value="" disabled selected>Select…</option>
+                <option value="zoom">Zoom (online)</option>
+                <option value="inperson">In-Person (DFW area)</option>
+                <option value="unsure">Not sure yet</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="pref-date">Preferred Date</label>
+              <input type="date" id="pref-date" name="preferred_date">
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="city">City / ZIP Code</label>
+            <input type="text" id="city" name="city_zip" placeholder="Frisco, TX — or 75034">
+          </div>
+
+          <div class="form-field">
+            <label for="interest">What are you most interested in?</label>
+            <select id="interest" name="interest">
+              <option value="" disabled selected>Select…</option>
+              <option value="healthier_cooking">Cooking healthier meals</option>
+              <option value="save_time">Saving time in the kitchen</option>
+              <option value="baby_food">Baby &amp; toddler food</option>
+              <option value="weight_loss">Weight management</option>
+              <option value="business">Becoming a consultant</option>
+              <option value="general">Just curious!</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="message">Anything else you'd like me to know?</label>
+            <textarea id="message" name="message" placeholder="Dietary needs, questions, preferred times…"></textarea>
+          </div>
+        </div>
+
+        <div class="form-submit">
+          <button type="submit" class="btn btn-green" style="width:100%;padding:0.85em;">Reserve My Spot &#8594;</button>
+        </div>
+
+        <p style="font-size:0.82rem;color:#888;text-align:center;margin-top:0.75rem;">
+          By submitting you agree to be contacted about your demo. No spam, ever.
+        </p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== WHAT TO EXPECT ===== -->
+  <section class="steps-strip">
+    <h2 class="section-title">What Happens at a Demo?</h2>
+    <p class="section-sub">Fun, relaxed, and genuinely delicious.</p>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">01</div>
+        <h3>We Cook Together</h3>
+        <p>I'll prepare 2–3 dishes live so you can see exactly what Thermomix can do — speed, versatility, ease.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">02</div>
+        <h3>You Ask Everything</h3>
+        <p>No question is too small. Recipes, price, financing, cleaning — ask away, I love the conversation.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">03</div>
+        <h3>You Decide, Freely</h3>
+        <p>There's zero pressure. Buy on the day, think it over, or just enjoy — all outcomes are totally fine.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="book-demo.html">Book a Demo</a></li>
+          <li><a href="buy.html">Buy Thermomix</a></li>
+          <li><a href="join-team.html">Join My Team</a></li>
+          <li><a href="direct-signup.html">Direct Signup</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Buy Direct</h4>
+        <ul>
+          <li><a href="https://shop.thermomix.com/consultant/104720" target="_blank" rel="noopener">Shop Thermomix</a></li>
+          <li><a href="https://register.thermomix.com/104720" target="_blank" rel="noopener">Become a Consultant</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Follow Me</h4>
+        <ul>
+          <li><a href="#" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="#" target="_blank" rel="noopener">Facebook</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="book-demo.html">Send a message</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Use</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Dominika's Kitchen &nbsp;|&nbsp; Independent Thermomix Consultant. Not affiliated with Vorwerk or Thermomix&reg;.</p>
+    </div>
+  </footer>
+
+  <!-- ===== FORM JS (inline thank-you) ===== -->
+  <script>
+    const form = document.getElementById('book-form');
+    const thankYou = document.getElementById('thank-you');
+
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const data = new FormData(form);
+      const action = form.getAttribute('action');
+
+      // If still placeholder, just show thank-you (dev mode)
+      if (action.includes('REPLACE_WITH_YOUR_ID')) {
+        showThankYou();
+        return;
+      }
+
+      try {
+        const res = await fetch(action, {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+          showThankYou();
+        } else {
+          alert('Something went wrong. Please try again or contact me directly.');
+        }
+      } catch(err) {
+        showThankYou(); // Still show thank-you if offline/test
+      }
+    });
+
+    function showThankYou() {
+      form.style.display = 'none';
+      thankYou.style.display = 'block';
+      thankYou.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  </script>
+
+</body>
+</html>
