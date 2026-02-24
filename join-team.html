@@ -213,8 +213,11 @@
 
       <!-- Interest Form -->
       <form id="join-form"
-            action="https://formspree.io/f/REPLACE_WITH_YOUR_ID"
+            action="https://api.web3forms.com/submit"
             method="POST">
+        <input type="hidden" name="access_key" value="f3735acd-8509-4ec0-9644-85bd108948ff">
+        <input type="hidden" name="subject" value="New Thermomix Team Enquiry">
+        <input type="hidden" name="redirect" value="false">
 
         <div class="form-group">
           <div class="form-row">
@@ -309,10 +312,6 @@
       const data = new FormData(joinForm);
       const action = joinForm.getAttribute('action');
 
-      if (action.includes('REPLACE_WITH_YOUR_ID')) {
-        showThankYouJoin();
-        return;
-      }
 
       try {
         const res = await fetch(action, {
