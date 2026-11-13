@@ -1104,3 +1104,170 @@ img { display: block; max-width: 100%; height: auto; }
 @media (max-width: 680px) {
   .offer-inline { margin-left: 16px; margin-right: 16px; }
 }
+
+/* ============================================================
+   LEGAL PAGES (privacy.html, terms.html)
+   ============================================================ */
+.legal-section { padding: 2.5rem 1.5rem 3.5rem; }
+.legal-wrap {
+  max-width: 760px;
+  margin: 0 auto;
+  color: var(--text-dark);
+}
+.legal-wrap h2 {
+  font-size: 1.25rem;
+  color: var(--green-dark);
+  margin: 2rem 0 0.6rem;
+}
+.legal-wrap p { margin-bottom: 0.9rem; }
+.legal-wrap ul { margin: 0 0 1rem 1.25rem; }
+.legal-wrap li { margin: 0.35rem 0; }
+.legal-wrap a { color: var(--green-dark); font-weight: 600; text-decoration: underline; }
+.legal-date { color: var(--text-mid); font-size: 0.9rem; }
+@media (max-width: 680px) {
+  .legal-section { padding: 2rem 16px 3rem; }
+}
+
+/* ============================================================
+   LOOK & FEEL REFRESH (Nov 2026)
+   ============================================================ */
+
+/* Home hero: copy + large photo side by side */
+.hero-split {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  text-align: left;
+  padding: 3.5rem max(1.5rem, calc((100% - 1160px) / 2));
+}
+.hero-split .hero-photo { flex: 1 1 400px; max-width: 460px; }
+.hero-split .hero-photo img {
+  width: 100%;
+  aspect-ratio: 5 / 6;
+  object-fit: cover;
+  object-position: 50% 30%;
+  border-radius: 18px;
+  box-shadow: 0 12px 40px rgba(41, 84, 62, 0.22);
+}
+.hero-split .hero-copy { flex: 1 1 420px; max-width: 520px; }
+.hero-split .hero-sub { margin-left: 0; margin-right: 0; }
+.hero-split .hero-btns,
+.hero-split .hero-secondary { justify-content: flex-start; }
+.hero-hello {
+  font-weight: 700;
+  color: var(--green-hover);
+  font-size: 1.05rem;
+  margin-bottom: 0.4rem;
+}
+
+@media (max-width: 860px) {
+  .hero-split {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.25rem;
+    padding: 1.5rem 16px 2.5rem;
+  }
+  .hero-split .hero-photo { flex: none; width: 100%; max-width: 300px; }
+  .hero-split .hero-photo img { aspect-ratio: 1 / 1; object-position: 60% 62%; }
+  .hero-split .hero-copy { flex: none; }
+  .hero-split .hero-btns,
+  .hero-split .hero-secondary { justify-content: center; }
+}
+
+/* Story: certificate photo beside shorter text */
+.story-split {
+  max-width: 1000px;
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+}
+.story-photo { flex: 0 0 320px; margin: 0; }
+.story-photo img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+.story-photo figcaption {
+  text-align: center;
+  font-size: 0.88rem;
+  color: var(--text-mid);
+  margin-top: 0.6rem;
+  font-weight: 600;
+}
+.story-text { flex: 1 1 auto; }
+.story-text .section-title { text-align: left; margin-bottom: 1.25rem; }
+@media (max-width: 760px) {
+  .story-split { flex-direction: column; align-items: center; gap: 1.75rem; }
+  .story-photo { flex: none; width: 100%; max-width: 300px; }
+  .story-text .section-title { text-align: center; }
+}
+
+/* Benefits: line icons instead of emoji */
+.benefit-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--white);
+  color: var(--green-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(41, 84, 62, 0.1);
+}
+
+/* TM7 section: video replaces the still image, capped height */
+.tm7-video { display: flex; justify-content: center; }
+.tm7-video .video-player {
+  width: auto;
+  max-width: 100%;
+  max-height: 560px;
+  aspect-ratio: 608 / 1080;
+  object-fit: cover;
+}
+
+/* Buy page: consultant photo */
+.why-buy-photo {
+  width: 100%;
+  max-height: 340px;
+  object-fit: cover;
+  object-position: 50% 15%;
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  margin-bottom: 1.25rem;
+}
+
+/* Book a Demo: round avatar in the header */
+.hero-avatar {
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 50% 12%;
+  border: 4px solid var(--white);
+  box-shadow: var(--shadow);
+  margin: 0 auto 1rem;
+}
+.page-hero .offer-inline { margin-top: 1.5rem; text-align: left; }
+
+/* Join My Team: photo in the header */
+.page-hero-photo img {
+  width: 100%;
+  max-width: 520px;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: 50% 40%;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  margin: 0 auto 1.75rem;
+}
+
+/* Offer bar: shorter wording on phones */
+.offer-short { display: none; }
+@media (max-width: 600px) {
+  .offer-long { display: none; }
+  .offer-short { display: inline; }
+}
+
+.page-hero + .form-section { padding-top: 1rem; }

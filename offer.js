@@ -8,6 +8,7 @@
     // Hide automatically after 11:59pm PT on Nov 30, 2026
     expires: '2026-12-01T08:00:00Z',
     text: '<strong>Black Friday Deal:</strong> Add a 2nd TM7 Mixing Bowl for just $100 (save $199) + 0% APR for up to 18 months. Ends Nov 30.',
+    shortText: '<strong>Black Friday:</strong> 2nd bowl $100 + 0% APR. Ends Nov 30.',
     cta: 'See the offer',
     href: 'buy.html#november-offer'
   };
@@ -24,7 +25,7 @@
     if (nav) {
       var bar = document.createElement('div');
       bar.className = 'offer-bar';
-      bar.innerHTML = '<span>' + OFFER.text + '</span> <a href="' + OFFER.href + '">' + OFFER.cta + ' &#8594;</a>';
+      bar.innerHTML = '<span class="offer-long">' + OFFER.text + '</span><span class="offer-short">' + OFFER.shortText + '</span> <a href="' + OFFER.href + '">' + OFFER.cta + ' &#8594;</a>';
       nav.insertAdjacentElement('afterend', bar);
     }
   }
