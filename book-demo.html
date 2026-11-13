@@ -113,6 +113,7 @@
         <input type="hidden" name="access_key" value="f3735acd-8509-4ec0-9644-85bd108948ff">
         <input type="hidden" name="subject" value="New Thermomix Demo Booking">
         <input type="hidden" name="redirect" value="false">
+        <input type="hidden" name="source_page" id="source-page" value="">
 
         <div class="form-group">
           <div class="form-row">
@@ -220,6 +221,7 @@
           <li><a href="buy.html">Buy Thermomix</a></li>
           <li><a href="join-team.html">Join My Team</a></li>
           <li><a href="direct-signup.html">Direct Signup</a></li>
+          <li><a href="areas.html">Areas I Serve</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -252,6 +254,12 @@
 
   <!-- ===== FORM JS (inline thank-you) ===== -->
   <script>
+    // Pre-fill the city when coming from the Areas page (book-demo.html?city=Frisco)
+    const params = new URLSearchParams(location.search);
+    const cityParam = params.get('city');
+    if (cityParam) document.getElementById('city').value = cityParam + ', TX';
+    document.getElementById('source-page').value = document.referrer || 'direct';
+
     const form = document.getElementById('book-form');
     const thankYou = document.getElementById('thank-you');
 
